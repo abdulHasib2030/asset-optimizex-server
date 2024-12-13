@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-hf&lhhx^%rq28-9^nnbb2==88h5_4v^@ruytq^_s9x$0%-6p22'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -202,12 +202,4 @@ SIMPLE_JWT = {
 ######## Reset password Email Token Time limit ##########
 PASSWORD_RESET_TIMEOUT = 900 ### second
 
-######## Email Configuration #####
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-######## EMAIL PASSWORD another Secure File.. ########
-EMAIL_HOST_USER = 'creative3218@gmail.com'
-EMAIL_HOST_PASSWORD = ''
-EMAIL_USE_TLS = True
 
