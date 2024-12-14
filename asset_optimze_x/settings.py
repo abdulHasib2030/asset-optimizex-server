@@ -202,4 +202,3 @@ SIMPLE_JWT = {
 ######## Reset password Email Token Time limit ##########
 PASSWORD_RESET_TIMEOUT = 900 ### second
 
-

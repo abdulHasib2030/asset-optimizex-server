@@ -55,7 +55,7 @@ class successView(views.APIView):
     org.premiumUser = True
     org.save()
     
-    return HttpResponseRedirect(redirect_to='http://localhost:5173/app/payment-success/')
+    return HttpResponseRedirect(redirect_to='https://assetoptimizex.netlify.app/app/payment-success/')
 
 ########## Permium button Click Success View #########
 class PlaceOrderPremiumView(views.APIView):
@@ -92,7 +92,7 @@ class PlaceOrderPremiumView(views.APIView):
 class PaymentFailView(views.APIView):
   # permission_classes = [permissions.IsAuthenticated]
   def post(self, request):
-    return HttpResponseRedirect(redirect_to='http://localhost:5173/app/payment-failed/')
+    return HttpResponseRedirect(redirect_to='https://assetoptimizex.netlify.app/app/payment-failed/')
     
   
      
@@ -140,8 +140,7 @@ class OrganizationRegisterView(viewsets.ModelViewSet):
       
       org_name = urlsafe_base64_encode(force_bytes(organization_name))   
       
-      
-      link = "http://localhost:5173/api/organization/register/"
+      link = "https://assetoptimizex.netlify.app/api/organization/register/"
       print("uid", uid, " Token", token, " link", link, 'organizationName', organization_name)
       body = f'''Hi {user.name}
 
@@ -359,7 +358,7 @@ class addMemberView(views.APIView):
         uid = urlsafe_base64_encode(force_bytes(user.id))
         token = default_token_generator.make_token(user)
         org_name = urlsafe_base64_encode(force_bytes(organization_name))
-        link = "http://localhost:5173/api/organization/add-user/"
+        link = "https://assetoptimizex.netlify.app/api/organization/add-user/"
         print("uid", uid, " Token", token, " link", link)
         body = f'''{user.name} has invited You to collaborate on the {organization_name} Organization
 

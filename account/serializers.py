@@ -100,7 +100,7 @@ class SendPasswordEmailSerializer(serializers.Serializer):
       print('Encoded UID ', uid)
       token = PasswordResetTokenGenerator().make_token(user)
       print("password Reset Token", token)
-      link = "http://localhost:5173/api/user/reset/"+uid+'/'+token
+      link = "https://assetoptimizex.netlify.app/api/user/reset/"+uid+'/'+token
       print('Password reset link', link)
       
       ## Send Email
